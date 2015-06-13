@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(version: 20150613101400) do
     t.string   "last_sign_in_ip",        limit: 255
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
-    t.boolean  "tipo",                   limit: 1
+    t.integer  "tipo",                   limit: 4
     t.integer  "tipoousuario",           limit: 4
   end
 
