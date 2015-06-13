@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tipoplato.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tipoplato.description %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @tipoplato.codigo %>
+</p>
+
+<%= link_to 'Edit', edit_tipoplato_path(@tipoplato) %> |
+<%= link_to 'Back', tipoplatos_path %>

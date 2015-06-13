@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  direccion: MyString
+  ruc: MyString
+  correo: MyString
+  telefono: MyString
+  estado: false
+  contacto: MyString
+  flagCriollo: false
+  flagMarino: false
+  flagChifa: false
+  flagVegetariano: false
+  flagPastas: false
+  user_id: 
+  distrito_id: 
+
+two:
+  name: MyString
+  description: MyString
+  direccion: MyString
+  ruc: MyString
+  correo: MyString
+  telefono: MyString
+  estado: false
+  contacto: MyString
+  flagCriollo: false
+  flagMarino: false
+  flagChifa: false
+  flagVegetariano: false
+  flagPastas: false
+  user_id: 
+  distrito_id: 

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <h4 class="page-head-line">LISTADO DE TIPOS DE PLATOS</h4>
+          </div>
+      </div>
+        </br>
+    <div class="row">
+
+<div class="col-md-12">
+     <div class="panel panel-default">
+                        <div class="panel-heading">
+                         Tipos de Platos
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Codigo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipoplatos.each do |tipoplato| %>
+      <tr>
+        <td><%= tipoplato.name %></td>
+        <td><%= tipoplato.description %></td>
+        <td><%= tipoplato.codigo %></td>
+        
+        <td><%= link_to 'Editar', edit_tipoplato_path(tipoplato) %></td>
+        <td><%= link_to 'Eliminar', tipoplato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Nuevo Tipo de Plato', new_tipoplato_path %>
+</div>
+</div>
+</div>
+<br>
+

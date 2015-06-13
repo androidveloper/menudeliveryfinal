@@ -1,0 +1,10 @@
+<tr id="lunch_<%= lunch.id %>">
+  <td><%= lunch.name %></td>
+  <td><%= lunch.description %></td>
+  <td><%= lunch.price %></td>
+  
+  <td>
+    <%= link_to 'Edit', edit_lunch_path(product), remote: true, :class => 'btn btn-sm btn-info' %>
+    <%= link_to 'Delete', lunch, remote: true, :method => :delete, data: {confirm: "Delete : #{lunch.name}"}, :class => 'btn btn-sm btn-danger' %>
+  </td>
+</tr>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lunch.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lunch.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @lunch.price %>
+</p>
+
+<p>
+  <strong>Pricemenu:</strong>
+  <%= @lunch.pricemenu %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @lunch.quantity %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @lunch.fecha %>
+</p>
+
+<p>
+  <strong>Tipoplato:</strong>
+  <%= @lunch.tipoplato %>
+</p>
+
+<p>
+  <strong>Tipomenu:</strong>
+  <%= @lunch.tipomenu %>
+</p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @lunch.restaurant %>
+</p>
+
+<%= link_to 'Edit', edit_lunch_path(@lunch) %> |
+<%= link_to 'Back', lunches_path %>

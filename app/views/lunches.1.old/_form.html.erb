@@ -1,0 +1,53 @@
+<%= form_for(@lunch) do |f| %>
+  <% if @lunch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lunch.errors.count, "error") %> prohibited this lunch from being saved:</h2>
+
+      <ul>
+      <% @lunch.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :pricemenu %><br>
+    <%= f.text_field :pricemenu %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br>
+    <%= f.date_select :fecha %>
+  </div>
+  <div class="field">
+    <%= f.label :tipoplato_id %><br>
+    <%= f.text_field :tipoplato_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tipomenu_id %><br>
+    <%= f.text_field :tipomenu_id %>
+  </div>
+  <div class="field">
+    <%= f.label :restaurant_id %><br>
+    <%= f.text_field :restaurant_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

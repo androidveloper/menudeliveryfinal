@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tipomenu.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tipomenu.description %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @tipomenu.codigo %>
+</p>
+
+<%= link_to 'Edit', edit_tipomenu_path(@tipomenu) %> |
+<%= link_to 'Back', tipomenus_path %>

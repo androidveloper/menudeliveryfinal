@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  price: 9.99
+  pricemenu: 9.99
+  quantity: 1
+  fecha: 2015-06-12
+  tipoplato_id: 
+  tipomenu_id: 
+  restaurant_id: 
+
+two:
+  name: MyString
+  description: MyString
+  price: 9.99
+  pricemenu: 9.99
+  quantity: 1
+  fecha: 2015-06-12
+  tipoplato_id: 
+  tipomenu_id: 
+  restaurant_id: 

@@ -1,0 +1,29 @@
+
+
+<div class="container">
+
+  <h2>Products</h2>
+  <div class="well">
+    <%= link_to "New Product", new_product_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-customer"></div>
+
+  <table id class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="products">
+    <%= render @products %>
+    </tbody>
+  </table>
+
+  <%= render 'dialog' %>
+
+</div>
+

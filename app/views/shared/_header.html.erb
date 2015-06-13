@@ -1,0 +1,65 @@
+<!--   <header> -->
+    <!-- LOGO HEADER END-->
+    <div class="container">
+        <div class="row header">
+            <section class="menu-section">
+                <div class="container">
+                    <div class="row">
+                        <!-- inicio logo-->    
+                        <div class="navbar navbar-inverse set-radius-zero">
+                            <div class="container">
+                                <!-- <h1 style="color:white">Comensales.com</h1>-->
+                                <div class="col-sm-12 logo">
+                                    <h1><a href="index.html">Comenzales.com</a> <span>.</span></h1>
+                                    <div class="col-md-12">
+                                        <div class="navbar-collapse collapse ">
+                                            <ul  id="menu-top" class="nav navbar-nav navbar-right">
+                                                <div id="user_nav">
+                                                    <% if user_signed_in? %>
+                                                        Hola: <%= current_user.email %>
+                                                        <%= link_to "Salir", destroy_user_session_path, :method => :delete %> -
+                                                        <% if current_user.tipoousuario ==1 %>
+                                                        <%= link_to "Registrar Menu", lunches_path %> -
+                                                        <% end %>
+                                                        <% if current_user.tipoousuario ==2 %>
+                                                        <%= link_to "Registrar Restaurant", new_lunch_path %> -
+                                                        <% end %>
+                                                    <%else%>
+                                                        <%= link_to "Registrate", new_user_registration_path %> -
+                                                        <%= link_to "Inicia Sesion", new_user_session_path %> -
+                                                    <%end%>
+                                                    <a href="quienesSomos.html">Quienes somos</a>
+                                                </div>
+                                                    
+                                                <li><a href="index.html">Inicio</a></li>
+                                                <li><a href="menu.html">Menu</a></li>
+                                                <li><a href="hacer_pedido.html">Hacer Pedido</a></li>
+                                                <li><a href="quienesSomos.html">Quienes Somos</a></li>
+                                               <% if current_user != nil &&  current_user.tipoousuario ==3  %>
+                                               <div class="row"> 
+                                               <div class="col-xs-3"> <%= link_to "Tipo Platos", tipoplatos_path %></div>
+                                                <div class="col-xs-3"><%= link_to "Restaurantes", restaurants_path %></div>
+                                                <div class="col-xs-3"><%= link_to "Tipo Menus", tipomenus_path %></div>
+                                                <div class="col-xs-3"><%= link_to "Distritos", distritos_path %></div>
+                                            </div>
+                                               <% end %>
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fin logo-->    
+                        <!-- MENU SECTION END-->
+                        <!-- HEADER END-->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+<!--</header> -->

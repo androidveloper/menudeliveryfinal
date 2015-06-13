@@ -1,0 +1,77 @@
+<%= form_for(@restaurant) do |f| %>
+  <% if @restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+
+      <ul>
+      <% @restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :ruc %><br>
+    <%= f.text_field :ruc %>
+  </div>
+  <div class="field">
+    <%= f.label :correo %><br>
+    <%= f.text_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.check_box :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :contacto %><br>
+    <%= f.text_field :contacto %>
+  </div>
+  <div class="field">
+    <%= f.label :flagCriollo %><br>
+    <%= f.check_box :flagCriollo %>
+  </div>
+  <div class="field">
+    <%= f.label :flagMarino %><br>
+    <%= f.check_box :flagMarino %>
+  </div>
+  <div class="field">
+    <%= f.label :flagChifa %><br>
+    <%= f.check_box :flagChifa %>
+  </div>
+  <div class="field">
+    <%= f.label :flagVegetariano %><br>
+    <%= f.check_box :flagVegetariano %>
+  </div>
+  <div class="field">
+    <%= f.label :flagPastas %><br>
+    <%= f.check_box :flagPastas %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :distrito_id %><br>
+    <%= f.select :distrito_id, Distrito.all.map {|distrito| [distrito.name,distrito.id]}, {:include_blank => "--"} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
